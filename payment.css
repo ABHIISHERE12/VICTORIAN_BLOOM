@@ -1,0 +1,128 @@
+/* Payment Page Background */
+body {
+    background: url('background3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+/* Payment Container */
+.payment-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.payment-container h1, .qr-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #7b4b27;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.payment-container h2, .qr-container p {
+    font-size: 16px;
+    color: #5a3e2b;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.back-btn {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    border-radius: 25px;
+    background: linear-gradient(to right, #c49a6c, #e3c99e);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.back-btn:hover {
+    background: linear-gradient(to right, #b38655, #d6af82);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pay-btn {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    border-radius: 25px;
+    background: linear-gradient(to right, #c49a6c, #e3c99e);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    /* Center text properly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+}
+
+.pay-btn:hover {
+    background: linear-gradient(to right, #b38655, #d6af82);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* QR Code Container */
+.qr-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.qr-box {
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.qr-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

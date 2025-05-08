@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Bloom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body >
+  <div class="bg-white shadow-md py-6 px-10 flex justify-between items-center sticky top-0 z-10">
+        <div class="text-4xl font-bold name">Victorian Bloom</div>
+        <div class="space-x-8 text-2xl">
+            <a href="#" class="hover:text-blue-500" class="name">Products</a>
+            <a href="#footer" class="hover:text-blue-500" class="name">About</a>
+            <a href="#" class="hover:text-blue-500" class="name">Contact Us</a>
+        </div>
+    </div>
+
+    
+    <!-- Slider Container -->
+<div class="slider relative overflow-hidden rounded-lg shadow-lg mt-6">
+    <div class="slides flex transition-transform duration-700 ease-in-out" id="slides">
+      <div class="slide w-full flex-shrink-0">
+        <img src="img1.jpg" class="w-full h-[70vh] object-cover" alt="Slide 1">
+      </div>
+      <div class="slide w-full flex-shrink-0">
+        <img src="img2.jpg" class="w-full h-[70vh] object-cover" alt="Slide 2">
+      </div>
+      <div class="slide w-full flex-shrink-0">
+        <img src="img3.jpg" class="w-full h-[70vh] object-cover" alt="Slide 3">
+      </div>
+    </div>
+  
+    <!-- Prev/Next Buttons -->
+    <button id="prev" class="prev left-4 top-1/2 transform -translate-y-1/2 absolute z-10 bg-white/30 hover:bg-white/50 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center">
+      ‹
+    </button>
+    <button id="next" class="next right-4 top-1/2 transform -translate-y-1/2 absolute z-10 bg-white/30 hover:bg-white/50 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center">
+      ›
+    </button>
+  </div>
+  
+
+    <section id="products" class="max-w-7xl mx-auto my-16 px-4 md:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a]">Our Premium Collection</h2>
+            <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Each bloom is carefully selected to create arrangements that evoke beauty and elegance.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Orchid.jpeg" alt="Orchid Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Luxurious Orchid</h3>
+                    <div class="product-price">Rs. 899</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="sunflower.jpeg" alt="Sunflower Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Radiant Sunflower</h3>
+                    <div class="product-price">Rs. 599</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="rose.jpeg" alt="Rose Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Classic Roses</h3>
+                    <div class="product-price">Rs. 1099</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="tulip.jpeg" alt="Tulip Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Elegant Tulips</h3>
+                    <div class="product-price">Rs. 699</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="marigold.jpeg" alt="Marigold Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Vibrant Marigold</h3>
+                    <div class="product-price">Rs. 289</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="daisy.jpeg" alt="Daisy Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Fresh Daisies</h3>
+                    <div class="product-price">Rs. 499</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Orchid.jpeg" alt="Premium Orchid" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Royal Orchid</h3>
+                    <div class="product-price">Rs. 1299</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Orchid.jpeg" alt="Exotic Orchid" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Exotic Orchid</h3>
+                    <div class="product-price">Rs. 899</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="#" class="border-2 border-[#8a5d58] text-[#8a5d58] hover:bg-[#8a5d58] hover:text-white py-2 px-6 rounded-md transition-colors duration-300 inline-block font-medium">View All Collections</a>
+        </div>
+    </section>
+
+<div class="i2 mt-12">
+    <div class="image2 rounded-2xl shadow-lg"></div>
+</div>
+</div>
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+    <div id="footer">
+        <div class="bg-white shadow-md py-10 px-10 flex justify-between items-center top-0 z-10">
+            <div><img src="icons8-instagram.svg" alt="Instagram Icon" width="50"></div>
+            <div><img src="icons8-facebook.svg"></div>
+            <div><img src="icons8-whatsapp.svg"></div>
+        </div>
+    </div>
+
+
+    <!--slider-->
+    <script>
+        const slides = document.getElementById("slides");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+        const totalSlides = slides.children.length;
+        let index = 0;
+      
+        function updateSlider() {
+          slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+      
+        nextBtn.addEventListener("click", () => {
+          index = (index + 1) % totalSlides;
+          updateSlider();
+        });
+      
+        prevBtn.addEventListener("click", () => {
+          index = (index - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        });
+      
+        // Optional: Auto-slide every 5s
+        setInterval(() => {
+          index = (index + 1) % totalSlides;
+          updateSlider();
+        }, 5000);
+      </script>
+      
+</body>
+</html>

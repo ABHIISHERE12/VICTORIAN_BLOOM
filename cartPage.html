@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-faf7f2 font-serif text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-[#F5F5DC] shadow-md py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center sticky top-0 z-10">
+        <div class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold text-[#8a5d58]">Victorian Bloom</div>
+        <nav class="mt-4 md:mt-0">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-lg md:text-xl font-['Cinzel',serif]">
+                <li><a href="home.html" class="hover:text-[#b98d86] transition-colors duration-300 text-xl text-[#8a5d58] ">Continue Shopping 🛍️</a></li>
+                <li><a href="#contact-form" class="hover:text-[#b98d86] transition-colors duration-300 text-xl text-[#8a5d58]">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex justify-center">
+        <div class="w-full h-30 m-10 shadow-md rounded-lg">
+            <div id="cartEmpty" class="m-10">Oops! Looks like your cart is Empty!</div>
+            <div id="cart-items" class="m-10 hidden"></div>
+            <!-- Total -->
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-8 gap-4">
+                <button id="clear-cart" class="btn-danger px-6 py-2 rounded-lg text-xl text-[#8a5d58] font-bold">🗑 Clear Cart</button>
+                <button class="bg-[#8a5d58] hover:bg-[#b98d86] text-white font-semibold py-3 px-6 rounded w-50 transition">
+                    <a href="payment.html">Proceed to Pay</a>
+                </button>
+                <div id="total" class="text-xl font-semibold text-[#8a5d58] m-5">Total: Rs. 0</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const cartItemsContainer = document.getElementById('cart-items');
+          const cartEmpty = document.getElementById('cartEmpty');
+          const clearCartButton = document.getElementById('clear-cart');
+          const totalElement = document.getElementById('total');
+          
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          
+          if (cart.length === 0) {
+            cartEmpty.style.display = 'block';
+          } else {
+            cartEmpty.style.display = 'none';
+            cartItemsContainer.style.display = 'block';
+      
+            let total = 0;
+            cart.forEach(item => {
+              const itemElement = document.createElement('div');
+              itemElement.classList.add('flex', 'justify-between', 'items-center', 'mb-4');
+              itemElement.innerHTML = `
+                <div class="flex items-center">
+                  <img src="${item.image}" class="w-20 h-20 object-cover rounded-lg mr-4" alt="${item.name}">
+                  <span>${item.name}</span>
+                </div>
+                <span>₹${item.price}</span>
+              `;
+              cartItemsContainer.appendChild(itemElement);
+              total += item.price;
+            });
+            
+            totalElement.textContent = `Total: ₹${total}`;
+          }
+      
+          clearCartButton.addEventListener('click', function() {
+            localStorage.removeItem('cart');
+            cartItemsContainer.innerHTML = '';
+            cartEmpty.style.display = 'block';
+            totalElement.textContent = 'Total: ₹0';
+          });
+        });
+      </script>
+      
