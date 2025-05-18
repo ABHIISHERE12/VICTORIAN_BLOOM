@@ -69,32 +69,6 @@ A full-stack web-based Flower Shop Management System designed to streamline the 
 
 ---
 
-## 🔄 Data Flow Diagram (Level 1 - Exploded View)
-
-This DFD represents the breakdown of key processes such as product browsing, order placement, query handling, and inventory updates in the system. It shows how data moves between external entities (User/Admin) and internal modules.
-
-### 📌 Diagram:
-
-![Level 1 DFD](Level.png)
-
----
-
-## 🔗 Project Links
-
-- **GitHub Repository**: [https://github.com/AddyTheDeveloper/Victorian-Bloom]  
-
----
-
-## 📌 Supporting Documents
-
-- ✅ Client Approval Proof  
-- 🌍 Client Location Proof  
-- 💳 Transaction ID Screenshot  
-- 📧 Email Acknowledgement  
-- 🧾 GST Number/Proof
-
----
-
 ## 📎 References
 
 - [Lovely Professional University – Wikipedia](https://en.wikipedia.org/wiki/Lovely_Professional_University)  
@@ -102,8 +76,3 @@ This DFD represents the breakdown of key processes such as product browsing, ord
 - PHP & MySQL Documentation  
 
 ---
-
-## 📁 Appendices
-
-- Appendix A1: Sample Admin Dashboard  
-- Appendix A2: Order and Query Logs  
